@@ -1,0 +1,38 @@
+[
+  {
+    "isPostseason": false,
+    "isPlayoff": false,
+    "isChampionship": false,
+    "player1Name": "",
+    "player1Score": 0,
+    "player2Name": "",
+    "player2Score": 0
+  },
+  {
+    "isPostseason": false,
+    "isPlayoff": false,
+    "isChampionship": false,
+    "player1Name": "",
+    "player1Score": 0,
+    "player2Name": "",
+    "player2Score": 0
+  },
+  {
+    "isPostseason": false,
+    "isPlayoff": false,
+    "isChampionship": false,
+    "player1Name": "",
+    "player1Score": 0,
+    "player2Name": "",
+    "player2Score": 0
+  },
+  {
+    "isPostseason": false,
+    "isPlayoff": false,
+    "isChampionship": false,
+    "player1Name": "",
+    "player1Score": 0,
+    "player2Name": "",
+    "player2Score": 0
+  }
+]

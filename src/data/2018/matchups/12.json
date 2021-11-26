@@ -1,0 +1,38 @@
+[
+  {
+    "isPostseason": false,
+    "isPlayoff": false,
+    "isChampionship": false,
+    "player1Name": "Neil",
+    "player1Score": 135.17,
+    "player2Name": "Mark",
+    "player2Score": 161.69
+  },
+  {
+    "isPostseason": false,
+    "isPlayoff": false,
+    "isChampionship": false,
+    "player1Name": "Sean",
+    "player1Score": 121.19,
+    "player2Name": "Andoni",
+    "player2Score": 138.8
+  },
+  {
+    "isPostseason": false,
+    "isPlayoff": false,
+    "isChampionship": false,
+    "player1Name": "Noah",
+    "player1Score": 171.56,
+    "player2Name": "Chris",
+    "player2Score": 169.52
+  },
+  {
+    "isPostseason": false,
+    "isPlayoff": false,
+    "isChampionship": false,
+    "player1Name": "John",
+    "player1Score": 170.74,
+    "player2Name": "Spenser",
+    "player2Score": 176.42
+  }
+]

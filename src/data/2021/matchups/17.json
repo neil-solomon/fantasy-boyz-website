@@ -1,0 +1,29 @@
+[
+  {
+    "isPostseason": true,
+    "isPlayoff": true,
+    "isChampionship": true,
+    "player1Name": "",
+    "player1Score": 0,
+    "player2Name": "",
+    "player2Score": 0
+  },
+  {
+    "isPostseason": true,
+    "isPlayoff": false,
+    "isChampionship": false,
+    "player1Name": "",
+    "player1Score": 0,
+    "player2Name": "",
+    "player2Score": 0
+  },
+  {
+    "isPostseason": true,
+    "isPlayoff": false,
+    "isChampionship": false,
+    "player1Name": "",
+    "player1Score": 0,
+    "player2Name": "",
+    "player2Score": 0
+  }
+]

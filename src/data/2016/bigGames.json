@@ -1,0 +1,32 @@
+[
+  {
+    "player": "Alton",
+    "week": 1,
+    "score": 209.0,
+    "pctAboveAvg": 52.73483613468994
+  },
+  {
+    "player": "Neil",
+    "week": 1,
+    "score": 206.5,
+    "pctAboveAvg": 50.907864410590776
+  },
+  {
+    "player": "Garrett",
+    "week": 10,
+    "score": 214.5,
+    "pctAboveAvg": 56.75417392770811
+  },
+  {
+    "player": "Andoni",
+    "week": 11,
+    "score": 202.5,
+    "pctAboveAvg": 47.98470965203214
+  },
+  {
+    "player": "Mark",
+    "week": 12,
+    "score": 208.5,
+    "pctAboveAvg": 52.36944178987014
+  }
+]

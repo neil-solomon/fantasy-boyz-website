@@ -1,0 +1,62 @@
+[
+  {
+    "player": "Zach",
+    "week": 1,
+    "score": 205.0,
+    "pctAboveAvg": 36.947584789311406
+  },
+  {
+    "player": "Noah",
+    "week": 4,
+    "score": 200.5,
+    "pctAboveAvg": 33.941418293936295
+  },
+  {
+    "player": "Mark",
+    "week": 4,
+    "score": 216.6,
+    "pctAboveAvg": 44.696813977389525
+  },
+  {
+    "player": "Owen",
+    "week": 8,
+    "score": 211.0,
+    "pctAboveAvg": 40.95580678314491
+  },
+  {
+    "player": "Custer",
+    "week": 8,
+    "score": 217.0,
+    "pctAboveAvg": 44.96402877697844
+  },
+  {
+    "player": "Hartnet",
+    "week": 8,
+    "score": 209.0,
+    "pctAboveAvg": 39.619732785200426
+  },
+  {
+    "player": "Mark",
+    "week": 10,
+    "score": 212.5,
+    "pctAboveAvg": 41.9578622816033
+  },
+  {
+    "player": "Max",
+    "week": 11,
+    "score": 204.0,
+    "pctAboveAvg": 36.279547790339166
+  },
+  {
+    "player": "Noah",
+    "week": 15,
+    "score": 211.5,
+    "pctAboveAvg": 41.28982528263106
+  },
+  {
+    "player": "Noah",
+    "week": 17,
+    "score": 211.5,
+    "pctAboveAvg": 41.28982528263106
+  }
+]
