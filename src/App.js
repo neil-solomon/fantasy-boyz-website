@@ -5,6 +5,8 @@ import finalStanding from "./dataHandlers/charts/finalStanding";
 import avgFinalStanding from "./dataHandlers/tables/avgFinalStanding";
 import seasonWins from "./dataHandlers/charts/seasonWins";
 import seasonPoints from "./dataHandlers/charts/seasonPoints";
+import seasonWeekTopScore from "./dataHandlers/charts/seasonWeekTopScore";
+import playerToBigGames from "./dataHandlers/aggregators/playerToBigGames";
 
 const bumpChart = (title, description, data) => {
   return (
@@ -54,7 +56,7 @@ const table = (columns, data) => {
 };
 
 function App() {
-  console.log(seasonPoints());
+  console.log(playerToBigGames());
 
   return (
     <div className="App">
@@ -88,6 +90,13 @@ function App() {
         seasonPoints(false),
         "player",
         [2018, 2019, 2020]
+      )}
+      {barChart(
+        "Top Score Of The Week",
+        "Includes playoffs, postseason consolation, and postseason bye weeks.",
+        seasonWeekTopScore(false),
+        "player",
+        [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
       )}
     </div>
   );
