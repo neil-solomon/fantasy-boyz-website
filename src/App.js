@@ -6,7 +6,8 @@ import avgFinalStanding from "./dataHandlers/tables/avgFinalStanding";
 import seasonWins from "./dataHandlers/charts/seasonWins";
 import seasonPoints from "./dataHandlers/charts/seasonPoints";
 import seasonWeekTopScore from "./dataHandlers/charts/seasonWeekTopScore";
-import playerToBigGames from "./dataHandlers/aggregators/playerToBigGames";
+import bigGames from "./dataHandlers/charts/bigGames";
+import biggestGames from "./dataHandlers/tables/biggestGames";
 
 const bumpChart = (title, description, data) => {
   return (
@@ -24,7 +25,9 @@ const barChart = (title, description, data, indexBy, keys) => {
   return (
     <div>
       <div style={{ marginTop: 25, fontWeight: "bold" }}>{title}</div>
-      <div>{description}</div>
+      <div style={{ paddingLeft: "15vw", paddingRight: "15vw" }}>
+        {description}
+      </div>
       <div style={{ height: "70vh", width: "90vw", paddingLeft: "5vw" }}>
         {BarChart({ data }, indexBy, keys)}
       </div>
@@ -56,11 +59,9 @@ const table = (columns, data) => {
 };
 
 function App() {
-  console.log(playerToBigGames());
-
   return (
     <div className="App">
-      <div style={{ marginTop: 50 }}>FANTASY BOYZ</div>
+      <div className="title">FANTASY BOYZ</div>
       {bumpChart("Final Standings", "", finalStanding())}
       {table(["Player", "Average Final Standing"], avgFinalStanding())}
       {barChart(
@@ -94,9 +95,20 @@ function App() {
       {barChart(
         "Top Score Of The Week",
         "Includes playoffs, postseason consolation, and postseason bye weeks.",
-        seasonWeekTopScore(false),
+        seasonWeekTopScore(),
         "player",
         [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+      )}
+      {barChart(
+        "Big Games",
+        "A big game occurs when a players score is more than 33% higher than the average regular season score for that season. Includes playoffs, postseason consolation, and postseason bye weeks.",
+        bigGames(),
+        "player",
+        [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+      )}
+      {table(
+        ["Player", "Score", "Season Avg", "% Above Season Avg", "Year", "Week"],
+        biggestGames(10)
       )}
     </div>
   );

@@ -53,7 +53,6 @@ function handleModernData(playerToBigGames, year, matchups) {
 
   const avgScore = yearToAvgRegularSeasonScore()[year];
   const bigGameThreshold = avgScore * 1.33;
-  console.log(year, avgScore, bigGameThreshold);
 
   for (const week of matchups) {
     if (week.length === 0) continue;
