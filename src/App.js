@@ -8,6 +8,7 @@ import seasonPoints from "./dataHandlers/charts/seasonPoints";
 import seasonWeekTopScore from "./dataHandlers/charts/seasonWeekTopScore";
 import bigGames from "./dataHandlers/charts/bigGames";
 import biggestGames from "./dataHandlers/tables/biggestGames";
+import regSeasonPointsSeasonAvg from "./dataHandlers/tables/regSeasonPointsSeasonAvg";
 
 const bumpChart = (title, description, data) => {
   return (
@@ -35,35 +36,41 @@ const barChart = (title, description, data, indexBy, keys) => {
   );
 };
 
-const table = (columns, data) => {
+const table = (title, columns, data) => {
   return (
-    <table align="center">
-      <thead>
-        <tr>
-          {columns.map((column) => (
-            <th key={column}>{column}</th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((datum) => (
-          <tr key={JSON.stringify(datum)}>
-            {Object.values(datum).map((value) => (
-              <td key={value}>{value}</td>
+    <>
+      <div style={{ marginTop: 25, marginBottom: 5, fontWeight: "bold" }}>
+        {title}
+      </div>
+      <table align="center">
+        <thead>
+          <tr>
+            {columns.map((column) => (
+              <th key={column}>{column}</th>
             ))}
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {data.map((datum) => (
+            <tr key={JSON.stringify(datum)}>
+              {Object.values(datum).map((value) => (
+                <td key={value}>{value}</td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </>
   );
 };
 
 function App() {
+  console.log(regSeasonPointsSeasonAvg(10));
   return (
     <div className="App">
       <div className="title">FANTASY BOYZ</div>
       {bumpChart("Final Standings", "", finalStanding())}
-      {table(["Player", "Average Final Standing"], avgFinalStanding())}
+      {table("Average Final Standing", ["Player", "Avg"], avgFinalStanding())}
       {barChart(
         "Regular Season Wins",
         "",
@@ -86,29 +93,35 @@ function App() {
         [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021]
       )}
       {barChart(
-        "Playoff Points (2018-2020)",
+        "Playoff Points (2018-2021)",
         "",
         seasonPoints(false),
         "player",
-        [2018, 2019, 2020]
+        [2018, 2019, 2020, 2021]
       )}
       {barChart(
         "Top Score Of The Week",
         "Includes playoffs, postseason consolation, and postseason bye weeks.",
         seasonWeekTopScore(),
         "player",
-        [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+        [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021]
       )}
       {barChart(
         "Big Games",
         "A big game occurs when a players score is more than 33% higher than the average regular season score for that season. Includes playoffs, postseason consolation, and postseason bye weeks.",
         bigGames(),
         "player",
-        [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+        [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021]
       )}
       {table(
+        "Biggest Games",
         ["Player", "Score", "Season Avg", "% Above Season Avg", "Year", "Week"],
         biggestGames(10)
+      )}
+      {table(
+        "Highest Regular Season Points Above Average",
+        ["Player", "Points", "Season Avg", "% Above Season Avg", "Year"],
+        regSeasonPointsSeasonAvg(10)
       )}
     </div>
   );

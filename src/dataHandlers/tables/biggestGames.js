@@ -1,32 +1,33 @@
 import playerToBigGames from "../aggregators/playerToBigGames";
-import yearToAvgRegularSeasonScore from "../aggregators/yearToAvgRegularSeasonScore";
+import yearToAvgRegSeasonGameScore from "../aggregators/yearToAvgRegSeasonGameScore";
 
 export default function biggestGames(numBigGames) {
   const _playerToBigGames = playerToBigGames();
-  const _yearToAvgRegularSeasonScore = yearToAvgRegularSeasonScore();
+  const _yearToAvgRegSeasonGameScore = yearToAvgRegSeasonGameScore();
   let allBigGames = [];
   let year;
 
   for (const player in _playerToBigGames) {
     for (const datum in _playerToBigGames[player]) {
-      if (!isNaN(parseInt(datum)) && _playerToBigGames[player][datum]) {
-        year = datum;
-        for (const bigGame of _playerToBigGames[player][year]) {
-          allBigGames.push({
-            player: player,
-            score: bigGame.score,
-            avgScore: Math.round(_yearToAvgRegularSeasonScore[year]),
-            pctAboveAvg: Math.round(bigGame.pctAboveAvg),
-            year: year,
-            week: bigGame.week,
-          });
-        }
+      if (isNaN(parseInt(datum)) || !_playerToBigGames[player]?.[datum]) {
+        continue;
+      }
+      year = datum;
+      for (const bigGame of _playerToBigGames[player][year]) {
+        allBigGames.push({
+          player: player,
+          score: bigGame.score.toFixed(2),
+          avgScore: _yearToAvgRegSeasonGameScore[year].toFixed(2),
+          pctAboveAvg: bigGame.pctAboveAvg.toFixed(2),
+          year: year,
+          week: bigGame.week,
+        });
       }
     }
   }
 
   allBigGames.sort((a, b) => {
-    if (a.pctAboveAvg > b.pctAboveAvg) return -1;
+    if (parseFloat(a.pctAboveAvg) > parseFloat(b.pctAboveAvg)) return -1;
     return 1;
   });
 

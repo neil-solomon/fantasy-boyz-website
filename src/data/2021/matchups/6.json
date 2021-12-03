@@ -3,36 +3,36 @@
     "isPostseason": false,
     "isPlayoff": false,
     "isChampionship": false,
-    "player1Name": "",
-    "player1Score": 0,
-    "player2Name": "",
-    "player2Score": 0
+    "player1Name": "Neil",
+    "player1Score": 197.36,
+    "player2Name": "Sean",
+    "player2Score": 203.71
   },
   {
     "isPostseason": false,
     "isPlayoff": false,
     "isChampionship": false,
-    "player1Name": "",
-    "player1Score": 0,
-    "player2Name": "",
-    "player2Score": 0
+    "player1Name": "Mark",
+    "player1Score": 239.89,
+    "player2Name": "Eric",
+    "player2Score": 218.23
   },
   {
     "isPostseason": false,
     "isPlayoff": false,
     "isChampionship": false,
-    "player1Name": "",
-    "player1Score": 0,
-    "player2Name": "",
-    "player2Score": 0
+    "player1Name": "Noah",
+    "player1Score": 162.36,
+    "player2Name": "Andoni",
+    "player2Score": 210.85
   },
   {
     "isPostseason": false,
     "isPlayoff": false,
     "isChampionship": false,
-    "player1Name": "",
-    "player1Score": 0,
-    "player2Name": "",
-    "player2Score": 0
+    "player1Name": "Chris",
+    "player1Score": 182.1,
+    "player2Name": "Jim",
+    "player2Score": 219.1
   }
 ]

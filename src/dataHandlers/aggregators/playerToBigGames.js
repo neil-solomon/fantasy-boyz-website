@@ -1,5 +1,5 @@
 import yearToBigGamesLegacy from "./yearToBigGamesLegacy";
-import yearToAvgRegularSeasonScore from "./yearToAvgRegularSeasonScore";
+import yearToAvgRegSeasonGameScore from "./yearToAvgRegSeasonGameScore";
 import yearToPlayerStats from "../aggregators/yearToPlayerStats";
 import matchups2018 from "../aggregators/matchups2018";
 import matchups2019 from "../aggregators/matchups2019";
@@ -51,7 +51,7 @@ function handleLegacyData(playerToBigGames) {
 function handleModernData(playerToBigGames, year, matchups) {
   if (matchups.length === 0) return;
 
-  const avgScore = yearToAvgRegularSeasonScore()[year];
+  const avgScore = yearToAvgRegSeasonGameScore()[year];
   const bigGameThreshold = avgScore * 1.33;
 
   for (const week of matchups) {
@@ -66,7 +66,7 @@ function handleModernData(playerToBigGames, year, matchups) {
           matchup.player1Name,
           weekNum,
           matchup.player1Score,
-          matchup.player1Score / avgScore - 1
+          (matchup.player1Score / avgScore - 1) * 100
         );
       }
       if (matchup.player2Score > bigGameThreshold) {
@@ -76,7 +76,7 @@ function handleModernData(playerToBigGames, year, matchups) {
           matchup.player2Name,
           weekNum,
           matchup.player2Score,
-          matchup.player2Score / avgScore - 1
+          (matchup.player2Score / avgScore - 1) * 100
         );
       }
       weekNum += 1;

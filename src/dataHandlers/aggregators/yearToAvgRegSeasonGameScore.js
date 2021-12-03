@@ -4,20 +4,20 @@ import matchups2019 from "../aggregators/matchups2019";
 import matchups2020 from "../aggregators/matchups2020";
 import matchups2021 from "../aggregators/matchups2021";
 
-export default function yearToAvgRegularSeasonScore() {
+export default function yearToAvgRegSeasonGameScore() {
   const _yearToPlayerStats = yearToPlayerStats();
-  let yearToAvgRegularSeasonScore = {};
+  let yearToAvgRegSeasonGameScore = {};
 
-  handleLegacyData(yearToAvgRegularSeasonScore, _yearToPlayerStats);
-  handleModernData(yearToAvgRegularSeasonScore, 2018, matchups2018());
-  handleModernData(yearToAvgRegularSeasonScore, 2019, matchups2019());
-  handleModernData(yearToAvgRegularSeasonScore, 2020, matchups2020());
-  handleModernData(yearToAvgRegularSeasonScore, 2021, matchups2021());
+  handleLegacyData(yearToAvgRegSeasonGameScore, _yearToPlayerStats);
+  handleModernData(yearToAvgRegSeasonGameScore, 2018, matchups2018());
+  handleModernData(yearToAvgRegSeasonGameScore, 2019, matchups2019());
+  handleModernData(yearToAvgRegSeasonGameScore, 2020, matchups2020());
+  handleModernData(yearToAvgRegSeasonGameScore, 2021, matchups2021());
 
-  return yearToAvgRegularSeasonScore;
+  return yearToAvgRegSeasonGameScore;
 }
 
-function handleLegacyData(yearToAvgRegularSeasonScore, _yearToPlayerStats) {
+function handleLegacyData(yearToAvgRegSeasonGameScore, _yearToPlayerStats) {
   const legacyYears = [2013, 2014, 2015, 2016, 2017];
 
   for (const year of legacyYears) {
@@ -27,11 +27,11 @@ function handleLegacyData(yearToAvgRegularSeasonScore, _yearToPlayerStats) {
       scores += player.regularSeasonPoints;
       numScores += 1;
     }
-    yearToAvgRegularSeasonScore[year] = scores / numScores / 13;
+    yearToAvgRegSeasonGameScore[year] = scores / numScores / 13;
   }
 }
 
-function handleModernData(yearToAvgRegularSeasonScore, year, matchups) {
+function handleModernData(yearToAvgRegSeasonGameScore, year, matchups) {
   if (matchups.length === 0) return;
 
   let scores = 0;
@@ -51,5 +51,5 @@ function handleModernData(yearToAvgRegularSeasonScore, year, matchups) {
     }
   }
 
-  yearToAvgRegularSeasonScore[year] = scores / numScores;
+  yearToAvgRegSeasonGameScore[year] = scores / numScores;
 }
