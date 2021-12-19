@@ -1,18 +1,16 @@
 import yearToPlayerStats from "../aggregators/yearToPlayerStats";
-import matchups2018 from "../aggregators/matchups2018";
-import matchups2019 from "../aggregators/matchups2019";
-import matchups2020 from "../aggregators/matchups2020";
-import matchups2021 from "../aggregators/matchups2021";
+import yearToMatchups from "./yearToMatchups";
 
 export default function yearToAvgRegSeasonScore() {
   const _yearToPlayerStats = yearToPlayerStats();
+  const _yearToMatchups = yearToMatchups();
   let yearToAvgRegSeasonScore = {};
 
   handleLegacyData(yearToAvgRegSeasonScore, _yearToPlayerStats);
-  handleModernData(yearToAvgRegSeasonScore, 2018, matchups2018());
-  handleModernData(yearToAvgRegSeasonScore, 2019, matchups2019());
-  handleModernData(yearToAvgRegSeasonScore, 2020, matchups2020());
-  handleModernData(yearToAvgRegSeasonScore, 2021, matchups2021());
+
+  for (const year in _yearToMatchups) {
+    handleModernData(yearToAvgRegSeasonScore, year, _yearToMatchups[year]);
+  }
 
   return yearToAvgRegSeasonScore;
 }

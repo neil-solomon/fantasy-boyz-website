@@ -2,6 +2,7 @@ import { ResponsiveBar } from "@nivo/bar";
 
 const BarChart = ({ data }, indexBy, keys) => (
   <ResponsiveBar
+    animate={true}
     data={data}
     keys={keys}
     indexBy={indexBy}

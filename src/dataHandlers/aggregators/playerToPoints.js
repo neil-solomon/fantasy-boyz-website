@@ -1,18 +1,21 @@
 import yearToPlayerStats from "../aggregators/yearToPlayerStats";
-import matchups2018 from "../aggregators/matchups2018";
-import matchups2019 from "../aggregators/matchups2019";
-import matchups2020 from "../aggregators/matchups2020";
-import matchups2021 from "../aggregators/matchups2021";
+import yearToMatchups from "./yearToMatchups";
 
 export default function playerToPoints(isRegluarSeason = true) {
   const _yearToPlayerStats = yearToPlayerStats();
+  const _yearToMatchups = yearToMatchups();
   let playerToPoints = {};
 
   handleLegacyData(playerToPoints, isRegluarSeason, _yearToPlayerStats);
-  handleModernData(playerToPoints, isRegluarSeason, 2018, matchups2018());
-  handleModernData(playerToPoints, isRegluarSeason, 2019, matchups2019());
-  handleModernData(playerToPoints, isRegluarSeason, 2020, matchups2020());
-  handleModernData(playerToPoints, isRegluarSeason, 2021, matchups2021());
+
+  for (const year in _yearToMatchups) {
+    handleModernData(
+      playerToPoints,
+      isRegluarSeason,
+      year,
+      _yearToMatchups[year]
+    );
+  }
 
   for (const player in playerToPoints) {
     let totalPoints = 0;

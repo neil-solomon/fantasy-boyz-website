@@ -1,0 +1,66 @@
+.container {
+  margin-bottom: 100px;
+}
+
+.chartContainer {
+  height: 70vh;
+  width: 90vw;
+  padding-left: 5vw;
+  animation: fadeIn 0.5s;
+}
+
+.viewTitle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1.5em;
+  animation: fadeIn 0.5s;
+}
+
+.viewDescription {
+  min-height: 50px;
+  padding-left: max(25vw, 25px);
+  padding-right: max(25vw, 25px);
+  text-align: center;
+  font-size: 1em;
+  animation: fadeIn 0.5s;
+}
+
+.tableTitle {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.table {
+  text-align: center;
+  animation: fadeIn 0.5s;
+}
+
+td {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid black;
+}
+
+th {
+  font-weight: normal;
+  background-color: rgb(0, 255, 100, 0.5);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid black;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

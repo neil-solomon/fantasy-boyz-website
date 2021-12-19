@@ -1,0 +1,20 @@
+.container {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  height: 50px;
+  background-color: black;
+}
+
+.title {
+  color: rgb(0, 255, 100);
+  margin-left: 25px;
+  font-size: 2em;
+  font-weight: bold;
+  float: left;
+}
+
+.menu {
+  margin-right: 50px;
+  margin-top: 10px;
+  float: right;
+}

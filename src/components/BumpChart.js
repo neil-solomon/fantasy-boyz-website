@@ -2,6 +2,7 @@ import { ResponsiveBump } from "@nivo/bump";
 
 const BumpChart = ({ data }) => (
   <ResponsiveBump
+    animate={true}
     data={data}
     margin={{ top: 40, right: 100, bottom: 40, left: 60 }}
     colors={{ scheme: "spectral" }}

@@ -10,13 +10,15 @@ import week9 from "../../data/2021/matchups/9.json";
 import week10 from "../../data/2021/matchups/10.json";
 import week11 from "../../data/2021/matchups/11.json";
 import week12 from "../../data/2021/matchups/12.json";
-// import week13 from "../../data/2021/matchups/13.json";
-// import week14 from "../../data/2021/matchups/14.json";
-// import week15 from "../../data/2021/matchups/15.json";
-// import week16 from "../../data/2021/matchups/16.json";
-// import week17 from "../../data/2021/matchups/17.json";
+import week13 from "../../data/2021/matchups/13.json";
+import week14 from "../../data/2021/matchups/14.json";
+import week15 from "../../data/2021/matchups/15.json";
+import week16 from "../../data/2021/matchups/16.json";
+import week17 from "../../data/2021/matchups/17.json";
 
 export default function matchups2021() {
+  let latestWeek = 14;
+
   return [
     week1,
     week2,
@@ -30,10 +32,10 @@ export default function matchups2021() {
     week10,
     week11,
     week12,
-    // week13,
-    // week14,
-    // week15,
-    // week16,
-    // week17,
-  ];
+    week13,
+    week14,
+    week15,
+    week16,
+    week17,
+  ].slice(0, latestWeek);
 }
