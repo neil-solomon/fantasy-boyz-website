@@ -17,7 +17,7 @@ export default class Main extends React.Component {
     super(props);
 
     this.state = {
-      viewIx: 7,
+      viewIx: 0,
     };
 
     this.views = [
