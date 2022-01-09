@@ -54,6 +54,7 @@ export default class Main extends React.Component {
       },
       {
         title: "Playoff Points (2018-2021)",
+        description: "Includes playoff bracket bye weeks.",
         chartType: "bar",
         indexBy: "player",
         data: seasonPoints(false),

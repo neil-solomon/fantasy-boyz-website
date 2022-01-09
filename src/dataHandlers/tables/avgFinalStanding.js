@@ -15,7 +15,10 @@ export default function avgFinalStanding() {
       }
     }
 
-    playerToAvgFinalStanding.push({ name: player, avg: finalStanding / count });
+    playerToAvgFinalStanding.push({
+      name: player,
+      avg: (finalStanding / count).toFixed(1),
+    });
   }
 
   playerToAvgFinalStanding.sort((a, b) => {

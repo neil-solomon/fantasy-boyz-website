@@ -1,34 +1,34 @@
 [
   {
     "name": "Chris",
-    "finalStanding": null
+    "finalStanding": 7
   },
   {
     "name": "Sean",
-    "finalStanding": null
+    "finalStanding": 8
   },
   {
     "name": "Noah",
-    "finalStanding": null
+    "finalStanding": 4
   },
   {
-    "name": "John",
-    "finalStanding": null
+    "name": "Jim",
+    "finalStanding": 2
   },
   {
     "name": "Neil",
-    "finalStanding": null
+    "finalStanding": 1
   },
   {
     "name": "Andoni",
-    "finalStanding": null
+    "finalStanding": 5
   },
   {
     "name": "Eric",
-    "finalStanding": null
+    "finalStanding": 3
   },
   {
     "name": "Mark",
-    "finalStanding": null
+    "finalStanding": 6
   }
 ]

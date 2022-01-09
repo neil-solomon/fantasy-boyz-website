@@ -19,7 +19,7 @@
   },
   {
     "isPostseason": true,
-    "isPlayoff": false,
+    "isPlayoff": true,
     "isChampionship": false,
     "player1Name": "Neil",
     "player1Score": 198.43,
@@ -28,7 +28,7 @@
   },
   {
     "isPostseason": true,
-    "isPlayoff": false,
+    "isPlayoff": true,
     "isChampionship": false,
     "player1Name": "Chris",
     "player1Score": 183.2,

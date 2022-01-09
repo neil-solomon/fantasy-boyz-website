@@ -19,7 +19,7 @@
   },
   {
     "isPostseason": true,
-    "isPlayoff": false,
+    "isPlayoff": true,
     "isChampionship": false,
     "player1Name": "Mark",
     "player1Score": 249.43,
@@ -28,7 +28,7 @@
   },
   {
     "isPostseason": true,
-    "isPlayoff": false,
+    "isPlayoff": true,
     "isChampionship": false,
     "player1Name": "Andoni",
     "player1Score": 246.47,

@@ -17,8 +17,6 @@ import week16 from "../../data/2021/matchups/16.json";
 import week17 from "../../data/2021/matchups/17.json";
 
 export default function matchups2021() {
-  let latestWeek = 14;
-
   return [
     week1,
     week2,
@@ -37,5 +35,5 @@ export default function matchups2021() {
     week15,
     week16,
     week17,
-  ].slice(0, latestWeek);
+  ];
 }

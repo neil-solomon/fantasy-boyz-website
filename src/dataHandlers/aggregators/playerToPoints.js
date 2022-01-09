@@ -74,6 +74,11 @@ function handleModernData(playerToPoints, isRegluarSeason, year, matchups) {
         playerToPoints[matchup.player1Name][year] += matchup.player1Score;
       }
 
+      if (matchup.player2Name === null) {
+        // this matchup a playoff bracket bye
+        continue;
+      }
+
       if (!playerToPoints?.[matchup.player2Name]) {
         playerToPoints[matchup.player2Name] = {};
       }
