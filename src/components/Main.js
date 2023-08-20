@@ -20,6 +20,9 @@ export default class Main extends React.Component {
       viewIx: 0,
     };
 
+    const years = [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022];
+    const playoffPointsYears = [2018, 2019, 2020, 2021, 2022];
+
     this.views = [
       {
         title: "Final Standings",
@@ -36,29 +39,34 @@ export default class Main extends React.Component {
         chartType: "bar",
         indexBy: "player",
         data: seasonWins(),
-        keys: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
+        keys: years,
       },
       {
         title: "Playoff Wins",
         chartType: "bar",
         indexBy: "player",
         data: seasonWins(false),
-        keys: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
+        keys: years,
       },
       {
         title: "Regular Season Points",
         chartType: "bar",
         indexBy: "player",
         data: seasonPoints(),
-        keys: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
+        keys: years,
       },
       {
-        title: "Playoff Points (2018-2021)",
+        title:
+          "Playoff Points (" +
+          playoffPointsYears[0] +
+          "-" +
+          playoffPointsYears[playoffPointsYears.length - 1] +
+          ")",
         description: "Includes playoff bracket bye weeks.",
         chartType: "bar",
         indexBy: "player",
         data: seasonPoints(false),
-        keys: [2018, 2019, 2020, 2021],
+        keys: playoffPointsYears,
       },
       {
         title: "Top Score Of The Week",
@@ -67,7 +75,7 @@ export default class Main extends React.Component {
         chartType: "bar",
         indexBy: "player",
         data: seasonWeekTopScore(),
-        keys: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
+        keys: years,
       },
       {
         title: "Big Games",
@@ -76,7 +84,7 @@ export default class Main extends React.Component {
         chartType: "bar",
         indexBy: "player",
         data: bigGames(),
-        keys: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
+        keys: years,
         table: {
           title: "Biggest Games",
           columns: [

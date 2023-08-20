@@ -7,6 +7,7 @@ import playerStats2018 from "../../data/2018/playerStats.json";
 import playerStats2019 from "../../data/2019/playerStats.json";
 import playerStats2020 from "../../data/2020/playerStats.json";
 import playerStats2021 from "../../data/2021/playerStats.json";
+import playerStats2022 from "../../data/2022/playerStats.json";
 
 export default function yearToPlayerStats() {
   return {
@@ -19,5 +20,6 @@ export default function yearToPlayerStats() {
     2019: playerStats2019,
     2020: playerStats2020,
     2021: playerStats2021,
+    2022: playerStats2022,
   };
 }

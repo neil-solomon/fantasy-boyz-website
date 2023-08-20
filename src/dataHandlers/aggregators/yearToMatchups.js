@@ -2,6 +2,7 @@ import matchups2018 from "../aggregators/matchups2018";
 import matchups2019 from "../aggregators/matchups2019";
 import matchups2020 from "../aggregators/matchups2020";
 import matchups2021 from "../aggregators/matchups2021";
+import matchups2022 from "../aggregators/matchups2022";
 
 export default function yearToMatchups() {
   return {
@@ -9,5 +10,6 @@ export default function yearToMatchups() {
     2019: matchups2019(),
     2020: matchups2020(),
     2021: matchups2021(),
+    2022: matchups2022(),
   };
 }

@@ -1,3 +1,12 @@
+# Adding Data
+
+- rawRegularSeasonData added to data/2022 and parseRawRegularData was run
+- playoff weeks data manual created in data/2022
+- matchups2022.json added to /aggregators
+- 2022 added to /aggregators/yearToMatchups.json
+- 2022 added to /aggregators/yearToPlayerStats.json
+- 2022 added to this.years and this.playoffPointsYears in /src/components/Main.js
+
 # Luck
 
 A player is lucky if they have a low score but win their matchup. For example, if they have the 2nd-lowest score of the week but happen to be playing the person with the lowest score.
