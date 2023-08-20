@@ -64,6 +64,11 @@ function handleModernData(playerToWins, isRegluarSeason, year, matchups) {
         continue;
       }
 
+      if (matchup.player2Name === null) {
+        // playoff bracket bye week
+        continue;
+      }
+
       let winner;
       if (matchup.player1Score > matchup.player2Score) {
         winner = matchup.player1Name;
